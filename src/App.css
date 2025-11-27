@@ -1,0 +1,123 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #0b1220; color: #0b1b2b; }
+.container { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.card { width: min(900px, 90vw); min-height: 50vh; background: #ddf1f1; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,.4); padding: 24px; }
+nav a { margin-right: 12px; }
+button { padding: 10px 16px; border-radius: 10px; border: 0; background: #0ea5e9; color: #fff; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+input, textarea { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #cbd5e1; margin: 6px 0 12px; }
+hr { border: 0; border-top: 1px solid #cbd5e1; margin: 16px 0; }
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0b1220;
+  color: #0b1b2b;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+
+.card-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.card {
+  width: min(900px, 90vw);
+  min-height: 50vh;
+  background: #ddf1f1;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+  padding: 24px;
+}
+
+
+.emoji-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12rem;              
+  height: 12rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: orbit 16s linear infinite;
+}
+
+
+.emoji-orbit span {
+  position: absolute;
+  font-size: 3.5rem;
+  transform: translate(-50%, -50%);
+}
+
+
+.emoji-orbit span:nth-child(1) {
+  top: 0%;
+  left: 50%;
+}
+
+
+.emoji-orbit span:nth-child(2) {
+  top: 50%;
+  left: 100%;
+}
+
+
+.emoji-orbit span:nth-child(3) {
+  top: 100%;
+  left: 50%;
+}
+
+
+.emoji-orbit span:nth-child(4) {
+  top: 50%;
+  left: 0%;
+}
+
+
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+nav a { margin-right: 12px; }
+
+button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 0;
+  background: #0ea5e9;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  margin: 6px 0 12px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #cbd5e1;
+  margin: 16px 0;
+}
